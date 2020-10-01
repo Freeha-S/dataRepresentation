@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View cars</title>
+        <!--Include Bootstrap-->
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    </head>
+
+    <body >
+        <h1>Cars</h1>
+        <!--Cars section-->
+        <div>
+        <button>Create</button>
+        </div>
+
+        <h1>All Cars</h1>
+        <!--All Cars section-->
+        <div>
+            <table class="table">
+                <tr>
+                    <th>Reg</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Price</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tr>
+                    <td>191 MO 123</td>
+                    <td>Ford</td>
+                    <td>Mondeo</td>
+                    <td>25,000</td>
+                    <td><button>update</button></td>
+                    <td><button>delete</button></td>
+                </tr>
+                <tr>
+                    <td>141 D 223</td>
+                    <td>Toyota</td>
+                    <td>Yaris</td>
+                    <td>40,000</td>
+                    <td><button>update</button></td>
+                    <td><button>delete</button></td>
+                </tr>
+                <tr>
+                    <td>08 RN 333</td>
+                    <td>Nissan</td>
+                    <td>Micra</td>
+                    <td>15500</td>
+                    <td><button>update</button></td>
+                    <td><button>delete</button></td>
+                </tr>
+                <tr>
+                    <td>201 SO 313</td>
+                    <td>Toyota</td>
+                    <td>Rava</td>
+                    <td>5000</td>
+                    <td><button>update</button></td>
+                    <td><button>delete</button></td>
+                </tr>
+
+
+            </table>
+        </div>
+        <h2><span >Create a</span> <span>Update this</span> Car</h2>
+        <!--The Update & Create section-->
+        <form>
+        <div class="form-group" style ="margin-left: 10pt;">
+            
+            <label for="reg">Reg</label> 
+            <input type="text" name="reg"/> <br/>
+                
+            <label for="make">Make</label>
+                <select name="make">
+                    <option value="Ford">Ford</option>
+                    <option value="Fiat">Toyota</option>
+                    <option value="Nissan">Nissan</option>
+                </select><br/>
+           
+            
+            <label for="model">Model</label>
+            <input type="text" name="model"/> <br/>
+            <label for="price">Price</label>
+            <input type="number" name="price"/> <br/>
+            <span><button>Create</button></span>
+            <span><button>Update</button></span>
+        </div>
+            
+       
+            
+    </form>
+    </body>
+</html>

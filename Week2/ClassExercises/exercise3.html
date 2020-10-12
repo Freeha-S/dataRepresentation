@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!---make a web page with an input and a button when the user click the button then the content of the input will
+display in an other div-->
+<html>
+    <head>
+        <title>exercise-3</title>
+    </head>
+    <body>
+        <div  id= "form">
+            <input id="name" type="text" value="Enter your name"/>
+            <button onclick="clicked()">Click Me</button>
+        </div>
+        <div id="output"> </div>
+    </body>
+    <script>
+        
+    // a function to get the value from text box and assign it to other div
+        function clicked(){
+            var name = document.getElementById('name').value
+            document.getElementById('output').innerText=name
+          
+        }
+       
+    </script>
+</html>

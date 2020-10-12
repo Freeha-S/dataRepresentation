@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!---Write the code so that when the user click on the button in a row, the contents of the cells in that row are stored in an
+    object and outputted to the console create a button that add a row in the table with data-->
+<html>
+    <head>
+        <title>exercise-10</title>
+    </head>
+    <body>
+        <table id ="mainTable" style="border-style:double;">
+            <tr>
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <Th>option</Th>
+            </tr>
+            <tr>
+                <td>g001</td>
+                <td>Ray</td>
+                <td>Mcdonald</td>
+
+                <td><button onclick="saveRow(this)">output</button></td>
+            </tr>
+        </table>
+        <button onclick="createRow()">add Row</button>
+    </body>
+    <script>
+        function saveRow(buttonElement){
+            
+            var rowElement = buttonElement.parentNode.parentNode
+            var data = {}
+            data.cell1 = rowElement.cells[0].firstChild.textContent;
+            data.cell2 = rowElement.cells[1].firstChild.textContent;
+            data.cell3 = rowElement.cells[2].firstChild.textContent;
+            
+            console.log(JSON.stringify(data))
+          
+        }
+        function createRow(){
+            var tableElement = document.getElementById("mainTable")
+            var data = {cell1:"G002", cell2:"Susan", cell3:"Roberts"}
+            var rowElement = tableElement.insertRow(-1) //new row at end of table
+            
+               var cellElement = rowElement.insertCell(0) //new cell at start of row (0)
+                cellElement.innerHTML = data.cell1; //what to put in it
+                //reuse cellElement variable
+                cellElement = rowElement.insertCell(1) //new cell pos 2 (1)
+                cellElement.innerHTML = data.cell2; //what to put in it
+                cellElement = rowElement.insertCell(2) //new cell pos 3 (2)
+                cellElement.innerHTML = data.cell3; //what to put in it
+            }
+
+    </script>
+</html>

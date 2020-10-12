@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!---Make a webpage that output 1 to 10 or (N) and make a web that output the values of an array-->
+<html>
+    <head>
+        <title>exercise-7</title>
+    </head>
+    <body>
+        <div id="number"> </div>
+        <div id="name"> </div>
+            
+        </div>
+    </body>
+    <script>
+            for(var i=1; i<=10; i++){
+                document.getElementById('number').innerText+=i
+            }
+            var numbers =['one', 'two', 'three', 'four', 'five','six']
+            var output =''
+            for (number of numbers){
+                output += number + " "
+                //output += number + '</br>'
+            }
+            document.getElementById("name").innerHTML = output
+
+    </script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!---Write the code so that when the user click on the button in a row, the contents of the cells in that row are stored in an
+    object and outputted to the console-->
+<html>
+    <head>
+        <title>exercise-9</title>
+    </head>
+    <body>
+        <table style="border-style:double;">
+            <tr>
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            <tr>
+                <td>g001</td>
+                <td>Ray</td>
+                <td>Mcdonald</td>
+
+                <td><button onclick="saveRow(this)">output</button></td>
+            </tr>
+        </table>
+
+    </body>
+    <script>
+        function saveRow(buttonElement){
+            
+                var rowElement = buttonElement.parentNode.parentNode
+                var data = {}
+                data.cell1 = rowElement.cells[0].firstChild.textContent;
+                data.cell2 = rowElement.cells[1].firstChild.textContent;
+                data.cell3 = rowElement.cells[2].firstChild.textContent;
+
+
+                console.log(JSON.stringify(data))
+
+            
+        }
+
+    </script>
+</html>

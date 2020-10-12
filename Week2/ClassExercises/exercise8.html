@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!---Create a webpage with multiple inputs and a button when the user hits the button read all inputs, store the 
+values into a class and output the class to console-->
+<html>
+    <head>
+        <title>exercise-8</title>
+    </head>
+    <body>
+        <div id="dataForm"> 
+            Student ID:<input type="text" name="id" /></br></br>
+            First Name:<input type="text" name="fName" /></br></br>
+            Last Name:<input type="text" name="lName" /></br></br>
+            <button onclick="saveData()">Save</button>
+        </div>
+    </body>
+    <script>
+        function saveData(){
+            
+            var student = {}
+            var form = document.getElementById("dataForm")
+            student.id = form.querySelector('input[name="id"').value
+            student.firstName = form.querySelector('input[name="fName"').value
+            student.lastName = form.querySelector('input[name="lName"').value
+                
+            console.log("form data " +JSON.stringify(student))
+        }
+
+    </script>
+</html>

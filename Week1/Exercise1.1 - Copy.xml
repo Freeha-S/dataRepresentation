@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<library>
+    <book>
+		<catalogue>Technical</catalogue>
+		<title>Make: Electronics</title>
+		<author> Charles Platt</author>
+		<isbn-10>1680450262</isbn-10>
+		<isbn-13>978-1680450262</isbn-13>
+    </book>
+    <book>
+		<catalogue>Technical</catalogue>
+        <title>Pattern Recognition and Machine Learning </title>
+        <author>Christopher M. Bishop</author>
+        <isbn-10>0387310738</isbn-10>
+		<isbn-13>978-0387310732</isbn-13>
+    </book>
+    <book>
+		<catalogue>Cooking</catalogue>
+        <title>The Food and Cooking of Pakistan:Traditional Dishes from the Home Kitchen</title>
+        <author>Shehzad Husain</author>
+        <isbn-10>0754832392</isbn-10>
+		<isbn-13>978-0754832393</isbn-13>
+    </book>
+    <book>
+		<catalogue>Cooking</catalogue>
+        <title>Mary Berry's Simple Comforts </title>
+        <author>Mary Berry </author>
+        <isbn-10>1785945076</isbn-10>
+		<isbn-13>978-1785945076</isbn-13>
+    </book>
+</library>

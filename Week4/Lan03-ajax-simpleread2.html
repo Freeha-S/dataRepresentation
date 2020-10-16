@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<title>
+read a simple json
+</title>
+</head>
+<body>
+<button onclick="readJSON()">go</button>
+<div id="output"></div>
+<table id="currencyTable">
+    <tr>
+        <td>Currecy</td>
+        <td>Rate</td>
+    </tr>
+</table>
+</body>
+<script>
+function readJSON(){
+$.ajax({
+"url": "https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=BTC,USD,EUR",
+"method":"GET",
+"data":"",
+"dataType": "JSON",
+"success":function(result){
+res=JSON.stringify(result)
+// it prints the whole result
+console.log(res);
+
+//for (var key in result.bpi) {
+for (var key of Object.keys(result)) {
+    // output at console
+    console.log(key + " -> " + result[key]);
+     //document.getElementById("output").innerText = rate;
+    var tableElement=document.getElementById("currencyTable");
+    var rowElement = tableElement.insertRow(-1) //new row at end of table
+    var cellElement = rowElement.insertCell(0) //new cell at start of row (0)
+    cellElement.innerHTML = key; //what to put in it
+    var cellElement = rowElement.insertCell(1) //new cell at start of row (0)
+    cellElement.innerHTML = result[key]; //what to put in it
+    }
+},
+"error":function(xhr,status,error){
+console.log("error: "+status+" msg:"+error);
+}
+});
+}
+</script>
+</html>

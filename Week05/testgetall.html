@@ -1,0 +1,50 @@
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>
+            test get all
+        </title>
+    </head>
+    <body>
+        <button onclick="getAll()">getAll</button>
+        <div id="output"></div>
+        <table id="carsTable">
+        <tr>
+        <th>reg</th><th>make</th><th>model</th><th>price</th><th></th><th></th>
+        </tr>
+        </table>
+    </body>
+    <script>
+        function getAll(){
+        $.ajax({
+        "url": "http://127.0.0.1:5000/cars",
+        "method":"GET",
+        "data":"",
+        "dataType": "JSON",
+        "success":function(result){
+            console.log(result);
+    for (var car of result.cars) {
+    // output at console
+    console.log(car)
+     //document.getElementById("output").innerText = rate;
+    var tableElement=document.getElementById("carsTable");
+    var rowElement = tableElement.insertRow(-1) //new row at end of table
+    var cellElement = rowElement.insertCell(0) //new cell at start of row (0)
+    cellElement.innerHTML = car.reg; //what to put in it
+    var cellElement = rowElement.insertCell(1) //new cell at start of row (0)
+    cellElement.innerHTML = car.make; //what to put in it
+    var cellElement = rowElement.insertCell(2) //new cell at start of row (0)
+    cellElement.innerHTML = car.model; //what to put in it
+    var cellElement = rowElement.insertCell(3) //new cell at start of row (0)
+    cellElement.innerHTML = car.price; //what to put in it
+    }
+
+        },
+        "error":function(xhr,status,error){
+        console.log("error: "+status+" msg:"+error);
+        }
+        });
+        }
+    </script>
+</html>
